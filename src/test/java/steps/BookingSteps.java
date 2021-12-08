@@ -9,6 +9,7 @@ import io.restassured.response.Response;
 import model.Booking;
 import net.thucydides.core.annotations.Steps;
 import org.junit.Assert;
+import support.World;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,7 +21,7 @@ public class BookingSteps {
 //	List<Response> responseList = new ArrayList<>();
 //	BookingEndPoints bookingEndPoints = new BookingEndPoints();
 	@Steps
-	World world;
+    World world;
 
 	@Steps
 	Booking booking;

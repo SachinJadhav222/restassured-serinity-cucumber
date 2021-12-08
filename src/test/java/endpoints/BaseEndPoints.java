@@ -11,7 +11,7 @@ import io.restassured.specification.RequestSpecification;
 import net.serenitybdd.rest.SerenityRest;
 import net.thucydides.core.annotations.Step;
 import utilities.ApplicationConstants;
-import utils.Constants;
+import support.Constants;
 
 public class BaseEndPoints {
 	ApplicationProperties appProps = Environment.INSTANCE.getApplicationProperties();
@@ -23,6 +23,11 @@ public class BaseEndPoints {
 	public RequestSpecification getCommonSpec() {
 		RequestSpecification rSpec = SerenityRest.given();
 		rSpec.contentType(ContentType.JSON).baseUri(appProps.getBaseURL());
+		return rSpec;
+	}
+	public RequestSpecification getCommonSpecGit(String url) {
+		RequestSpecification rSpec = SerenityRest.given();
+		rSpec.contentType(ContentType.JSON).baseUri(appProps.getPropertyValue(url));
 		return rSpec;
 	}
 
@@ -65,7 +70,7 @@ public class BaseEndPoints {
 	 * 
 	 * @param request     details for sending the request
 	 * @param requestType of the request. i.e GET, POST, PUT, DELETE, UPDATE
-	 * @param url         to execute for the request
+	// * @param url         to execute for the request
 	 * @param pojo        if provided will be added to the body of request as JSON
 	 *                    payload
 	 * @return response received from the service by sending the request

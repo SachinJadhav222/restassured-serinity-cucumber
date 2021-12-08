@@ -1,4 +1,4 @@
-package steps;
+package support;
 
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;

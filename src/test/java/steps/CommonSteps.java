@@ -7,7 +7,7 @@ import env.ApplicationProperties;
 import env.Environment;
 import io.cucumber.java.en.Given;
 import io.restassured.specification.RequestSpecification;
-import utils.Constants;
+import support.Constants;
 
 public class CommonSteps {
 	ApplicationProperties appProps = Environment.INSTANCE.getApplicationProperties();

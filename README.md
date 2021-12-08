@@ -37,7 +37,7 @@ src
       + endpoints                   endpoints of the services
       + runners                     test runner(senerity runner/trigger configurations)
       + stepdefinitions             Step definitions for the BDD feature
-      + utils                       Common utility methods
+      + support                       Common utility methods
     + resources
       + features                  Feature files
       + properties                AUT properties files

@@ -6,8 +6,8 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import model.Booking;
 import model.BookingDetail;
-import steps.World;
-import utils.Constants;
+import support.World;
+import support.Constants;
 
 public class BookingEndPoints extends BaseEndPoints {
 	private final String BOOKING_ENDPOINT_PATH = "booking";
