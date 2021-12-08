@@ -26,7 +26,6 @@ public class ApiHelper {
 
     @Step("User authentication done using Token")
     public void getAuthentication(String token){
-
         request= SerenityRest
                 .given()
                 .auth()
